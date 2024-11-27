@@ -68,7 +68,7 @@ func getAuctionDuration() time.Duration {
 }
 
 func (ar *AuctionRepository) MonitorAndCloseExpiredAuctions(ctx context.Context) {
-	ticker := time.NewTicker(time.Second * 5)
+	ticker := time.NewTicker(time.Second * 1)
 	defer ticker.Stop()
 
 	for {
